@@ -15,3 +15,9 @@ def start_build():
 def written():
     global total_written
     total_written = total_written + 1
+
+
+@hooks.register("stats")
+def stats():
+    global start_time
+    final_time = time.time() - start_time
